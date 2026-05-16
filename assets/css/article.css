@@ -1,0 +1,739 @@
+/* =========================================================
+   GEA DIGITAL HUB — Stil ARTICOL BLOG
+   Folosit împreună cu style.css (paleta navy + auriu)
+   ========================================================= */
+
+.article {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* ============ HERO ARTICOL ============ */
+
+.article-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+}
+
+.article-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-family: var(--font-secondary);
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  transition: color 0.3s, gap 0.3s;
+}
+
+.article-back-link:hover {
+  color: var(--gold);
+  gap: 0.8rem;
+}
+
+.article-category {
+  display: inline-block;
+  font-family: var(--font-secondary);
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--gold);
+  border-radius: 50px;
+  margin-bottom: 1.5rem;
+  background: rgba(255, 215, 0, 0.05);
+}
+
+.article-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.15;
+  font-weight: 500;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.article-subtitle {
+  font-family: var(--font-secondary);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  color: var(--text-muted);
+  font-weight: 300;
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.5;
+}
+
+.article-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-secondary);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  flex-wrap: wrap;
+}
+
+.article-meta strong {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.article-meta .dot {
+  opacity: 0.5;
+}
+
+/* ============ IMAGINE COPERTĂ ============ */
+
+.article-cover {
+  margin-bottom: 3rem;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.article-cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.article-cover-placeholder {
+  aspect-ratio: 16 / 9;
+  background:
+    linear-gradient(135deg,
+      rgba(74, 123, 184, 0.3) 0%,
+      rgba(30, 58, 95, 0.6) 100%),
+    radial-gradient(circle at 30% 30%, rgba(255, 215, 0, 0.15) 0%, transparent 60%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 8rem;
+  color: var(--gold);
+  opacity: 0.95;
+  text-shadow: 0 0 50px var(--gold-glow);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+/* ============ CORP ARTICOL ============ */
+
+.article-body {
+  font-family: var(--font-secondary);
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: var(--text-light);
+}
+
+.article-body p {
+  margin-bottom: 1.5rem;
+}
+
+/* Lead paragraph cu drop cap (litera mare colorată la început) */
+.article-lead {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.article-lead::first-letter {
+  font-family: var(--font-display);
+  float: left;
+  font-size: 4.5rem;
+  line-height: 0.85;
+  font-weight: 600;
+  color: var(--gold);
+  margin: 0.2rem 0.8rem 0 0;
+  text-shadow: 0 0 20px var(--gold-glow);
+}
+
+/* ============ HEADERE INTERNE ============ */
+
+.article-body h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 500;
+  margin: 3.5rem 0 1.25rem;
+  color: var(--text-light);
+  line-height: 1.2;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.article-body h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 4px;
+  background: linear-gradient(180deg, var(--gold), #FFE55C);
+  border-radius: 4px;
+  box-shadow: 0 0 12px var(--gold-glow);
+}
+
+.article-body h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.2vw, 1.6rem);
+  font-weight: 500;
+  margin: 2.5rem 0 1rem;
+  color: var(--gold);
+}
+
+.article-body h4 {
+  font-family: var(--font-secondary);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 2rem 0 0.8rem;
+  color: var(--text-light);
+  letter-spacing: 0.3px;
+}
+
+/* ============ LINK-URI ============ */
+
+.article-body a {
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.4);
+  transition: all 0.3s var(--ease-smooth);
+}
+
+.article-body a:hover {
+  color: #FFE55C;
+  border-bottom-color: var(--gold);
+  background: var(--gold-soft);
+  padding: 0 4px;
+  margin: 0 -4px;
+  border-radius: 3px;
+}
+
+/* ============ ITALIC, BOLD, COD ============ */
+
+.article-body strong { color: var(--gold); font-weight: 700; }
+.article-body em { color: var(--text-light); font-style: italic; }
+.article-body code {
+  background: rgba(255, 215, 0, 0.08);
+  color: var(--gold);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.92em;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+/* ============ LISTE ============ */
+
+.article-body ul,
+.article-body ol {
+  margin: 1.5rem 0 1.75rem 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.article-body ul li,
+.article-body ol li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.85rem;
+  line-height: 1.7;
+}
+
+.article-body ul li::before {
+  content: '✦';
+  position: absolute;
+  left: 0.4rem;
+  top: 0;
+  color: var(--gold);
+  font-size: 0.95rem;
+  text-shadow: 0 0 8px var(--gold-glow);
+}
+
+.article-body ol {
+  counter-reset: ol-counter;
+}
+
+.article-body ol li {
+  counter-increment: ol-counter;
+}
+
+.article-body ol li::before {
+  content: counter(ol-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: linear-gradient(135deg, var(--gold), #FFE55C);
+  color: var(--navy-deep);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: var(--font-secondary);
+  box-shadow: 0 2px 8px var(--gold-glow);
+}
+
+/* ============ PULL QUOTE ============ */
+
+.pull-quote {
+  position: relative;
+  margin: 3rem 0;
+  padding: 2rem 2.5rem 2rem 4rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--text-light);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, rgba(74, 123, 184, 0.08) 100%);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius-md);
+}
+
+.pull-quote::before {
+  content: '"';
+  position: absolute;
+  left: 0.7rem;
+  top: -0.5rem;
+  font-family: var(--font-display);
+  font-size: 5rem;
+  color: var(--gold);
+  opacity: 0.6;
+  line-height: 1;
+  text-shadow: 0 0 25px var(--gold-glow);
+}
+
+.pull-quote cite {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  font-style: normal;
+  color: var(--gold);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.pull-quote cite::before { content: '— '; }
+
+/* ============ CALLOUT BOXES (Sfat, Atenție, Notă, Important) ============ */
+
+.callout {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--gold);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.06) 0%, rgba(74, 123, 184, 0.08) 100%);
+}
+
+.callout-icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+
+.callout-content {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.callout-content strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--gold);
+}
+
+.callout p { margin-bottom: 0.5rem; }
+.callout p:last-child { margin-bottom: 0; }
+
+/* Variante callout după ton */
+.callout-tip     { border-left-color: var(--cat-pfa);        background: linear-gradient(135deg, rgba(77, 182, 172, 0.1) 0%, rgba(74, 123, 184, 0.06) 100%); }
+.callout-tip .callout-content strong   { color: var(--cat-pfa); }
+
+.callout-warning { border-left-color: var(--cat-transport);  background: linear-gradient(135deg, rgba(255, 183, 77, 0.1) 0%, rgba(74, 123, 184, 0.06) 100%); }
+.callout-warning .callout-content strong { color: var(--cat-transport); }
+
+.callout-info    { border-left-color: var(--cat-it);         background: linear-gradient(135deg, rgba(79, 195, 247, 0.1) 0%, rgba(74, 123, 184, 0.06) 100%); }
+.callout-info .callout-content strong  { color: var(--cat-it); }
+
+.callout-success { border-left-color: var(--cat-agricultura); background: linear-gradient(135deg, rgba(174, 213, 129, 0.1) 0%, rgba(74, 123, 184, 0.06) 100%); }
+.callout-success .callout-content strong { color: var(--cat-agricultura); }
+
+/* ============ IMAGINI INLINE ============ */
+
+.article-figure {
+  margin: 2.5rem 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.article-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.article-figure figcaption {
+  padding: 0.85rem 1.25rem;
+  background: rgba(30, 58, 95, 0.5);
+  font-family: var(--font-secondary);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+  text-align: center;
+  border-top: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+/* ============ TABEL COMPARAȚIE ============ */
+
+.article-table-wrap {
+  margin: 2rem 0;
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 215, 0, 0.15);
+}
+
+.article-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-secondary);
+  font-size: 0.95rem;
+}
+
+.article-table th {
+  background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy-deep) 100%);
+  color: var(--gold);
+  font-weight: 700;
+  text-align: left;
+  padding: 1rem 1.25rem;
+  letter-spacing: 0.5px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--gold);
+}
+
+.article-table td {
+  padding: 0.9rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.08);
+  color: var(--text-light);
+}
+
+.article-table tr:hover td {
+  background: rgba(255, 215, 0, 0.04);
+}
+
+.article-table tr:last-child td { border-bottom: none; }
+
+/* ============ KEY TAKEAWAYS ============ */
+
+.key-takeaways {
+  margin: 3rem 0;
+  padding: 2rem 2.25rem;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.08) 0%, rgba(74, 123, 184, 0.1) 100%);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  border-radius: var(--radius-lg);
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25), 0 0 30px var(--gold-glow);
+}
+
+.key-takeaways::before {
+  content: '✦';
+  position: absolute;
+  top: -16px;
+  left: 2rem;
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--gold) 0%, #FFE55C 100%);
+  color: var(--navy-deep);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: 0 4px 15px var(--gold-glow);
+}
+
+.key-takeaways h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--gold) !important;
+  margin: 0 0 1.25rem 0 !important;
+}
+
+.key-takeaways ul li::before {
+  content: '✓';
+  color: var(--gold);
+}
+
+/* ============ CTA PRODUS ÎN ARTICOL ============ */
+
+.article-product-cta {
+  margin: 3.5rem 0;
+  padding: 2.5rem;
+  background:
+    linear-gradient(135deg, var(--navy-mid) 0%, var(--navy-deep) 100%),
+    radial-gradient(circle at 30% 20%, rgba(255, 215, 0, 0.15) 0%, transparent 50%);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), 0 0 40px var(--gold-glow);
+  position: relative;
+  overflow: hidden;
+}
+
+.article-product-cta::before {
+  content: 'G';
+  position: absolute;
+  font-family: var(--font-display);
+  font-size: 14rem;
+  color: var(--gold);
+  opacity: 0.06;
+  top: -3rem;
+  right: -2rem;
+  line-height: 1;
+}
+
+.article-product-cta-eyebrow {
+  font-family: var(--font-secondary);
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.article-product-cta h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  color: var(--text-light) !important;
+  margin: 0 0 1rem 0 !important;
+  padding: 0 !important;
+}
+.article-product-cta h3::before { display: none !important; }
+
+.article-product-cta p {
+  color: var(--text-muted);
+  margin-bottom: 1.75rem;
+  font-size: 1rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.article-product-cta .btn-cta-large {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--gold) 0%, #FFE55C 50%, var(--gold) 100%);
+  color: var(--navy-deep);
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px var(--gold-glow), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transition: all 0.3s var(--ease-smooth);
+}
+
+.article-product-cta .btn-cta-large:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 14px 40px var(--gold-glow), 0 0 30px var(--gold-glow);
+  border-bottom: none;
+  background: linear-gradient(135deg, var(--gold) 0%, #FFE55C 50%, var(--gold) 100%);
+}
+
+/* ============ FOOTER ARTICOL ============ */
+
+.article-footer {
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(255, 215, 0, 0.15);
+}
+
+/* Bio autor */
+.author-bio {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1.75rem;
+  background: linear-gradient(135deg, rgba(74, 123, 184, 0.1) 0%, rgba(30, 58, 95, 0.3) 100%);
+  border-radius: var(--radius-md);
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.author-avatar {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--gold) 0%, #FFE55C 100%);
+  color: var(--navy-deep);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  box-shadow: 0 6px 20px var(--gold-glow);
+}
+
+.author-info {
+  flex: 1;
+}
+
+.author-info strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--gold);
+  margin-bottom: 0.3rem;
+}
+
+.author-info p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Share */
+.article-share {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1.25rem 0;
+  margin-bottom: 2rem;
+}
+
+.article-share-label {
+  font-family: var(--font-secondary);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.article-share a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  background: rgba(74, 123, 184, 0.15);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 50px;
+  color: var(--text-light);
+  font-family: var(--font-secondary);
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s var(--ease-smooth);
+}
+
+.article-share a:hover {
+  border-color: var(--gold);
+  background: var(--gold-soft);
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+/* Articole asociate */
+.article-related {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(255, 215, 0, 0.15);
+}
+
+.article-related h3 {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--gold) !important;
+  margin: 0 0 1.5rem 0 !important;
+  padding: 0 !important;
+}
+.article-related h3::before { display: none !important; }
+
+.article-related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.article-related-item {
+  padding: 1.25rem;
+  background: linear-gradient(135deg, rgba(74, 123, 184, 0.12) 0%, rgba(30, 58, 95, 0.3) 100%);
+  border: 1px solid rgba(255, 215, 0, 0.15);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all 0.3s var(--ease-smooth);
+  display: block;
+}
+
+.article-related-item:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 20px var(--gold-glow);
+}
+
+.article-related-date {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-secondary);
+}
+
+.article-related-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--text-light);
+  line-height: 1.35;
+  margin: 0;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 640px) {
+  .article { padding: 2rem 1.25rem 4rem; }
+  .article-body { font-size: 1rem; }
+  .article-lead { font-size: 1.08rem; }
+  .article-lead::first-letter { font-size: 3.5rem; }
+  .pull-quote { padding: 1.5rem 1.5rem 1.5rem 3rem; font-size: 1.15rem; }
+  .pull-quote::before { font-size: 4rem; left: 0.4rem; }
+  .callout { flex-direction: column; gap: 0.5rem; padding: 1.1rem 1.25rem; }
+  .article-product-cta { padding: 1.75rem 1.25rem; }
+  .author-bio { flex-direction: column; text-align: center; align-items: center; }
+}

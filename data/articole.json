@@ -1,0 +1,34 @@
+{
+  "articole": [
+    {
+      "slug": "cheltuieli-deductibile-2026",
+      "titlu": "Cheltuieli deductibile 2026 — ghidul complet pentru PFA",
+      "data": "12 Mai 2026",
+      "extras": "Tot ce trebuie să știi despre cheltuielile deductibile pentru PFA în 2026, conform ultimelor modificări legislative.",
+      "imagine": null,
+      "produsLegat": {
+        "text": "Vezi Ghidul Complet PFA",
+        "link": "https://payhip.com/b/your-it-guide"
+      }
+    },
+    {
+      "slug": "pfa-vs-microintreprindere",
+      "titlu": "PFA sau microîntreprindere? Comparație pentru veniturile sub 60.000 €",
+      "data": "05 Mai 2026",
+      "extras": "Analiză comparativă completă cu exemple practice pentru a alege forma juridică optimă în 2026.",
+      "imagine": null,
+      "produsLegat": {
+        "text": "Calculator PRO — verifică pentru tine",
+        "link": "https://payhip.com/b/your-calculator-pro"
+      }
+    },
+    {
+      "slug": "erori-fiscale-freelanceri",
+      "titlu": "5 erori fiscale frecvente la freelancerii români",
+      "data": "28 Aprilie 2026",
+      "extras": "Cele mai întâlnite greșeli care duc la amenzi ANAF și cum le poți evita încă de la început.",
+      "imagine": null,
+      "produsLegat": null
+    }
+  ]
+}

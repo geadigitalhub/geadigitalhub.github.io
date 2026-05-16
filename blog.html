@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Gea Digital Hub</title>
+  <meta name="description" content="Articole, ghiduri și resurse gratuite despre fiscalitate, freelancing și antreprenoriat digital în România.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="gold-letter">G</span>ea Digital Hub
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#produse">Produse</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#despre">Despre</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Meniu">☰</button>
+    </div>
+  </nav>
+
+  <section style="padding-top: 4rem;">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="eyebrow">Blog Gea Digital Hub</div>
+        <h2>Articole, ghiduri și resurse gratuite</h2>
+        <p>Informații verificate despre fiscalitate, freelancing și managementul propriei afaceri în România.</p>
+      </div>
+
+      <div class="blog-grid" id="blogGrid">
+        <!-- Articolele se vor genera dinamic din data/articole.json sau se vor adăuga manual aici -->
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="gold-letter">G</span>ea Digital Hub
+        </a>
+        <p>Resurse digitale premium pentru profesioniștii moderni.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigare</h4>
+        <ul>
+          <li><a href="index.html#produse">Produse</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="index.html#despre">Despre</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Magazin</h4>
+        <ul>
+          <li><a href="https://payhip.com/geadigitalhub" target="_blank" rel="noopener">Payhip</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <form class="newsletter-mini newsletter-form">
+          <input type="email" placeholder="Email-ul tău" required>
+          <button type="submit">Abonează-te</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Gea Digital Hub.</div>
+      <div class="legal-links">
+        <a href="pages/termeni.html">Termeni</a>
+        <a href="pages/confidentialitate.html">Confidențialitate</a>
+        <a href="pages/cookies.html">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Sistem blog modular — încarcă articolele din JSON
+    async function loadArticles() {
+      const grid = document.getElementById('blogGrid');
+      try {
+        const response = await fetch('data/articole.json');
+        const data = await response.json();
+
+        grid.innerHTML = data.articole.map(art => `
+          <article class="blog-card">
+            <div class="blog-image">
+              ${art.imagine ? `<img src="${art.imagine}" alt="${art.titlu}" style="width:100%; height:100%; object-fit:cover;">` : `<div class="blog-image-placeholder">G</div>`}
+            </div>
+            <div class="blog-content">
+              <div class="blog-date">${art.data}</div>
+              <h3>${art.titlu}</h3>
+              <p class="blog-excerpt">${art.extras}</p>
+              <a href="posts/${art.slug}.html" class="blog-link">
+                Citește articolul <span>→</span>
+              </a>
+              ${art.produsLegat ? `
+                <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,215,0,0.15);">
+                  <a href="${art.produsLegat.link}" target="_blank" rel="noopener" class="btn btn-small btn-primary" style="font-size: 0.75rem;">
+                    ${art.produsLegat.text} →
+                  </a>
+                </div>
+              ` : ''}
+            </div>
+          </article>
+        `).join('');
+      } catch (e) {
+        grid.innerHTML = '<p style="text-align:center; color:var(--text-muted); grid-column:1/-1;">Articolele se încarcă în curând.</p>';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadArticles);
+
+    document.addEventListener('submit', (e) => {
+      if (e.target.classList.contains('newsletter-form')) {
+        e.preventDefault();
+        const email = e.target.querySelector('input[type="email"]').value;
+        if (email) alert(`Mulțumim! Vei primi noutățile pe ${email}.`);
+      }
+    });
+  </script>
+</body>
+</html>

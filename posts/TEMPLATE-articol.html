@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ============================================================
+       INSTRUCȚIUNI DE UTILIZARE A TEMPLATE-ULUI:
+
+       1. Duplichează acest fișier și redenumește-l cu titlul articolului.
+          Exemplu: posts/cheltuieli-pfa-2026.html
+
+       2. Caută în acest fișier tot ce începe cu „[" și înlocuiește
+          cu conținutul tău real. Exemplu: [TITLUL ARTICOLULUI]
+
+       3. Șterge blocurile pe care nu le folosești (callout, tabel,
+          pull-quote etc.) — fiecare bloc are un comentariu deasupra.
+
+       4. Pune fișierul în folderul posts/ și adaugă-l la link-urile
+          din index.html și blog.html.
+
+       ============================================================ -->
+
+  <!-- META TAGS — completează pentru fiecare articol -->
+  <title>[TITLUL ARTICOLULUI] — Gea Digital Hub</title>
+  <meta name="description" content="[REZUMATUL SCURT PENTRU GOOGLE — max 160 caractere]">
+  <meta name="keywords" content="[cuvinte, cheie, separate, prin, virgulă]">
+  <meta name="author" content="Gea Digital Hub">
+
+  <!-- Open Graph — cum apare când partajezi pe Facebook/WhatsApp/LinkedIn -->
+  <meta property="og:title" content="[TITLUL ARTICOLULUI]">
+  <meta property="og:description" content="[REZUMATUL SCURT]">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../assets/images/blog/[NUMELE-IMAGINII].jpg">
+
+  <!-- Fonturi -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Stilurile globale + stilurile pentru articole -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/article.css">
+</head>
+<body>
+
+  <!-- ============ NAVIGARE (la fel ca pe restul site-ului) ============ -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="logo">
+        <span class="gold-letter">G</span>ea Digital Hub
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html#produse">Produse</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../index.html#despre">Despre</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Meniu">☰</button>
+    </div>
+  </nav>
+
+  <!-- ============ ARTICOL ============ -->
+  <article class="article">
+
+    <!-- HERO ARTICOL (titlu, meta, autor) -->
+    <header class="article-hero">
+      <a href="../blog.html" class="article-back-link">← Înapoi la blog</a>
+
+      <!-- Categoria articolului (fiscal, marketing, turism, strategie etc.) -->
+      <div class="article-category">[CATEGORIE]</div>
+
+      <h1 class="article-title">[TITLUL ARTICOLULUI]</h1>
+
+      <p class="article-subtitle">[SUBTITLUL — o frază care extinde titlul, opțional]</p>
+
+      <div class="article-meta">
+        <span>De <strong>Gea Digital Hub</strong></span>
+        <span class="dot">•</span>
+        <span>[12 Mai 2026]</span>
+        <span class="dot">•</span>
+        <span>[5 min citire]</span>
+      </div>
+    </header>
+
+    <!-- IMAGINE DE COPERTĂ (opțional) -->
+    <!-- VARIANTA A: cu imagine reală -->
+    <!--
+    <div class="article-cover">
+      <img src="../assets/images/blog/[NUMELE-IMAGINII].jpg" alt="[DESCRIERE IMAGINE]">
+    </div>
+    -->
+
+    <!-- VARIANTA B: cu placeholder „G" auriu (până când ai imaginea) -->
+    <div class="article-cover">
+      <div class="article-cover-placeholder">G</div>
+    </div>
+
+    <!-- ============ CORPUL ARTICOLULUI ============ -->
+    <div class="article-body">
+
+      <!-- LEAD PARAGRAPH (primul paragraf, cu drop cap la prima literă) -->
+      <p class="article-lead">
+        [Primul paragraf al articolului. Primul cuvânt va avea automat o literă mare aurie tip „revistă". Scrie aici introducerea care prinde cititorul. Recomandare: 2-3 propoziții care explică despre ce e articolul și de ce e relevant.]
+      </p>
+
+      <!-- Paragraf normal -->
+      <p>
+        [Continuă cu paragrafele tale normale. Poți folosi <strong>text bold</strong> pentru cuvinte cheie, <em>text italic</em> pentru accent, <a href="#">link-uri</a> către alte pagini sau resurse externe, și <code>cod sau termeni tehnici</code> când e cazul.]
+      </p>
+
+      <!-- HEADER SECȚIUNE PRINCIPALĂ (cu bară aurie în stânga) -->
+      <h2>[Primul subtitlu mare]</h2>
+
+      <p>
+        [Conținutul secțiunii. Paragraf de explicație.]
+      </p>
+
+      <!-- HEADER SECUNDAR (text auriu) -->
+      <h3>[Subtitlu nivel 2 — culoare aurie]</h3>
+
+      <p>
+        [Mai mult conținut.]
+      </p>
+
+      <!-- ============ CALLOUT BOX — VARIANTE ============ -->
+
+      <!-- SFAT / TIP (verde-teal) -->
+      <div class="callout callout-tip">
+        <div class="callout-icon">💡</div>
+        <div class="callout-content">
+          <strong>Sfatul Gea</strong>
+          <p>[Aici scrii un sfat util. Folosește acest bloc pentru recomandări scurte, hack-uri, tricks-uri.]</p>
+        </div>
+      </div>
+
+      <!-- ATENȚIE / WARNING (portocaliu) -->
+      <div class="callout callout-warning">
+        <div class="callout-icon">⚠️</div>
+        <div class="callout-content">
+          <strong>Atenție</strong>
+          <p>[Aici scrii o avertizare importantă. Folosește pentru capcane, erori frecvente, riscuri.]</p>
+        </div>
+      </div>
+
+      <!-- INFORMAȚIE / INFO (albastru-cyan) -->
+      <div class="callout callout-info">
+        <div class="callout-icon">ℹ️</div>
+        <div class="callout-content">
+          <strong>Info</strong>
+          <p>[Aici scrii o informație contextuală. Folosește pentru date, statistici, referințe legislative.]</p>
+        </div>
+      </div>
+
+      <!-- SUCCES / SUCCESS (verde) -->
+      <div class="callout callout-success">
+        <div class="callout-icon">✓</div>
+        <div class="callout-content">
+          <strong>Bună practică</strong>
+          <p>[Aici scrii o bună practică confirmată. Folosește pentru tehnici încercate, exemple de succes.]</p>
+        </div>
+      </div>
+
+      <!-- ============ LISTĂ CU BULLETS ============ -->
+      <h3>[Subtitlu pentru lista de mai jos]</h3>
+
+      <ul>
+        <li>[Punct 1 cu o explicație scurtă]</li>
+        <li>[Punct 2 cu o explicație scurtă]</li>
+        <li>[Punct 3 cu o explicație scurtă]</li>
+        <li>[Punct 4 cu o explicație scurtă]</li>
+      </ul>
+
+      <!-- ============ LISTĂ NUMEROTATĂ (cu cerculețe aurii) ============ -->
+      <h3>[Subtitlu pentru pașii de urmat]</h3>
+
+      <ol>
+        <li>[Primul pas]</li>
+        <li>[Al doilea pas]</li>
+        <li>[Al treilea pas]</li>
+      </ol>
+
+      <!-- ============ PULL QUOTE (citat mare evidențiat) ============ -->
+      <blockquote class="pull-quote">
+        [Citatul tău care iese în evidență. Folosește pentru fraze memorabile, statistici-șoc sau idei centrale ale articolului.]
+        <cite>[Sursa citatului sau autorul, opțional]</cite>
+      </blockquote>
+
+      <!-- ============ IMAGINE INLINE (cu legendă) ============ -->
+      <figure class="article-figure">
+        <img src="../assets/images/blog/[NUMELE-IMAGINII].jpg" alt="[DESCRIERE IMAGINE]">
+        <figcaption>[Legenda imaginii — context, sursă sau credit]</figcaption>
+      </figure>
+
+      <!-- ============ TABEL COMPARATIV ============ -->
+      <h3>[Titlu pentru tabel — exemplu: Comparație PFA vs Microîntreprindere]</h3>
+
+      <div class="article-table-wrap">
+        <table class="article-table">
+          <thead>
+            <tr>
+              <th>[Criteriu]</th>
+              <th>[Opțiunea A]</th>
+              <th>[Opțiunea B]</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>[Rând 1 — criteriu]</td>
+              <td>[Valoare A]</td>
+              <td>[Valoare B]</td>
+            </tr>
+            <tr>
+              <td>[Rând 2 — criteriu]</td>
+              <td>[Valoare A]</td>
+              <td>[Valoare B]</td>
+            </tr>
+            <tr>
+              <td>[Rând 3 — criteriu]</td>
+              <td>[Valoare A]</td>
+              <td>[Valoare B]</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ============ KEY TAKEAWAYS (rezumat final cu bifări aurii) ============ -->
+      <div class="key-takeaways">
+        <h3>Ce reții din acest articol</h3>
+        <ul>
+          <li>[Idee cheie 1 — pe scurt]</li>
+          <li>[Idee cheie 2 — pe scurt]</li>
+          <li>[Idee cheie 3 — pe scurt]</li>
+          <li>[Idee cheie 4 — pe scurt]</li>
+        </ul>
+      </div>
+
+      <!-- ============ CTA PRODUS (recomandare în mijloc/final de articol) ============ -->
+      <div class="article-product-cta">
+        <div class="article-product-cta-eyebrow">Produs recomandat</div>
+        <h3>[Numele produsului tău]</h3>
+        <p>[Scurtă descriere — de ce e relevant pentru articolul curent. Cum rezolvă problema discutată.]</p>
+        <a href="[https://payhip.com/b/LINK]" target="_blank" rel="noopener" class="btn-cta-large">
+          Cumpără acum →
+        </a>
+      </div>
+
+      <!-- Continuă articolul cu alte secțiuni... -->
+      <h2>[Subtitlu mare nou]</h2>
+
+      <p>
+        [Conținut...]
+      </p>
+
+      <!-- CONCLUZIE -->
+      <h2>În concluzie</h2>
+
+      <p>
+        [Sumarizează ce-a învățat cititorul. Reia ideea principală. Lasă un îndemn final spre acțiune.]
+      </p>
+
+    </div>
+    <!-- /article-body -->
+
+    <!-- ============ FOOTER ARTICOL ============ -->
+    <footer class="article-footer">
+
+      <!-- BIO AUTOR -->
+      <div class="author-bio">
+        <div class="author-avatar">G</div>
+        <div class="author-info">
+          <strong>Gea Digital Hub</strong>
+          <p>Atelier digital pentru profesioniștii moderni. Creăm ghiduri fiscale, calculatoare interactive și kit-uri editoriale premium pentru freelanceri, PFA și microîntreprinderi din România și diaspora.</p>
+        </div>
+      </div>
+
+      <!-- DISTRIBUIE -->
+      <div class="article-share">
+        <span class="article-share-label">Distribuie:</span>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://pinterest.com/pin/create/button/?url=" target="_blank" rel="noopener">Pinterest</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:?subject=Articol%20interesant&body=" target="_blank" rel="noopener">Email</a>
+      </div>
+
+      <!-- ARTICOLE ASOCIATE -->
+      <div class="article-related">
+        <h3>Citește mai departe</h3>
+        <div class="article-related-grid">
+          <a href="[LINK-ARTICOL-1].html" class="article-related-item">
+            <div class="article-related-date">[Data 1]</div>
+            <h4 class="article-related-title">[Titlul articolului asociat 1]</h4>
+          </a>
+          <a href="[LINK-ARTICOL-2].html" class="article-related-item">
+            <div class="article-related-date">[Data 2]</div>
+            <h4 class="article-related-title">[Titlul articolului asociat 2]</h4>
+          </a>
+          <a href="[LINK-ARTICOL-3].html" class="article-related-item">
+            <div class="article-related-date">[Data 3]</div>
+            <h4 class="article-related-title">[Titlul articolului asociat 3]</h4>
+          </a>
+        </div>
+      </div>
+
+    </footer>
+
+  </article>
+
+  <!-- ============ BUTON SCROLL TO TOP ============ -->
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Înapoi sus">
+    <span class="scroll-top-arrow">↑</span>
+    <span class="scroll-top-label">Sus</span>
+  </button>
+
+  <!-- ============ FOOTER GLOBAL ============ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo">
+          <span class="gold-letter">G</span>ea Digital Hub
+        </a>
+        <p>Resurse digitale premium pentru profesioniștii moderni. Calitatea o livrăm noi. Valoarea o trăiești tu.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Produse</h4>
+        <ul>
+          <li><a href="../index.html#produse">Ghiduri fiscale</a></li>
+          <li><a href="../index.html#produse">Calculatoare</a></li>
+          <li><a href="https://payhip.com/geadigitalhub" target="_blank" rel="noopener">Magazin Payhip</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resurse</h4>
+        <ul>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../index.html#despre">Despre</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Gea Digital Hub. Toate drepturile rezervate.</div>
+      <div class="legal-links">
+        <a href="../pages/termeni.html">Termeni</a>
+        <a href="../pages/confidentialitate.html">Confidențialitate</a>
+        <a href="../pages/cookies.html">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script pentru buton „Sus" și meniu mobil -->
+  <script>
+    // Meniu mobil
+    document.querySelector('.menu-toggle')?.addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+    // Scroll to top
+    const btn = document.getElementById('scrollTopBtn');
+    if (btn) {
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
+  </script>
+</body>
+</html>
