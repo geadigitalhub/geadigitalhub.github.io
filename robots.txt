@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://geadigitalhub.github.io/sitemap.xml
+
+# Permite indexarea tuturor paginilor publice
+# Blochează fișierele tehnice
+Disallow: /assets/js/
+Disallow: /*.json$

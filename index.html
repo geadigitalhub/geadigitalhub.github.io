@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gea Digital Hub — Resurse digitale premium pentru freelanceri și antreprenori</title>
+  <meta name="description" content="Ghiduri fiscale, calculatoare HTML interactive și kit-uri editoriale pentru freelanceri români, PFA și microîntreprinderi. Resurse digitale create cu rigoare profesională.">
+  <meta name="keywords" content="ghid fiscal PFA, calculator microîntreprindere, resurse freelanceri, business kit, Gea Digital Hub">
+  <meta name="author" content="Gea Digital Hub">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gea Digital Hub — Resurse digitale premium">
+  <meta property="og:description" content="Ghiduri fiscale și calculatoare pentru freelanceri și antreprenori români.">
+  <meta property="og:type" content="website">
+
+  <!-- Pinterest verification -->
+  <meta name="p:domain_verify" content="19c9a48adce24f4adf20551e8a2afe46"/>
+
+  <!-- Google Search Console verification (preluat din site-ul vechi) -->
+  <meta name="google-site-verification" content="Apib7-x98H0j5cPqHWwSMm6dNU4GmODRoqxLiDzdx9I">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://geadigitalhub.github.io/">
+
+  <!-- Fonturi -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- NAVIGARE -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="gold-letter">G</span>ea Digital Hub
+      </a>
+      <ul class="nav-links">
+        <li><a href="#produse">Produse</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#despre">Despre</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Meniu">☰</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="eyebrow">Resurse digitale premium</div>
+        <h1>
+          Instrumente <span class="accent">digitale</span> create pentru profesioniștii moderni
+        </h1>
+        <p class="lead">
+          Ghiduri fiscale, calculatoare interactive și kit-uri editoriale pentru freelanceri români, PFA și microîntreprinderi. Calitatea o livrăm noi. Valoarea o trăiești tu.
+        </p>
+        <div class="hero-ctas">
+          <a href="#produse" class="btn btn-primary">
+            Descoperă produsele
+            <span>→</span>
+          </a>
+          <a href="#despre" class="btn btn-secondary">
+            Despre Gea Digital Hub
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <a href="#produse" class="floating-card" data-cat="pfa">
+          <div class="card-mini-eyebrow">Fiscal</div>
+          <h4>5 Ghiduri Deductibile · PFA & Micro</h4>
+          <div class="floating-card-count">5 produse</div>
+        </a>
+        <a href="#produse" class="floating-card" data-cat="calculatoare">
+          <div class="card-mini-eyebrow">Calculatoare HTML</div>
+          <h4>PFA vs Microîntreprindere 2026</h4>
+          <div class="floating-card-count">2 produse</div>
+        </a>
+        <a href="#produse" class="floating-card" data-cat="turism">
+          <div class="card-mini-eyebrow">Turism Multilingv</div>
+          <h4>VoyageCalc + TripPlanner · 6 limbi</h4>
+          <div class="floating-card-count">2 produse</div>
+        </a>
+        <a href="#produse" class="floating-card" data-cat="marketing">
+          <div class="card-mini-eyebrow">Marketing</div>
+          <h4>ROI · Buget · Promoții 2026</h4>
+          <div class="floating-card-count">3 produse</div>
+        </a>
+        <a href="#produse" class="floating-card soon" data-cat="strategie">
+          <span class="floating-soon-badge">În curând</span>
+          <div class="card-mini-eyebrow">Strategie</div>
+          <h4>SWOT 3D Interactiv · 2 ediții</h4>
+          <div class="floating-card-count">2 produse în devenire</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUSE -->
+  <section id="produse" class="fade-in">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="eyebrow">Catalog produse</div>
+        <h2>Resurse pentru fiecare provocare</h2>
+        <p>Click pe orice card pentru a vedea descrierea detaliată și opțiunile de achiziție.</p>
+      </div>
+
+      <!-- Filtre categorii — generate dinamic în ordine alfabetică -->
+      <div class="category-filters" id="categoryFilters"></div>
+
+      <!-- Grid produse — generat dinamic din produse.json -->
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- BLOG PREVIEW -->
+  <section id="blog" class="fade-in">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="eyebrow">Blog</div>
+        <h2>Articole și resurse gratuite</h2>
+        <p>Informații actualizate despre fiscalitate, freelancing și managementul propriei afaceri.</p>
+      </div>
+
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-image">
+            <div class="blog-image-placeholder">G</div>
+          </div>
+          <div class="blog-content">
+            <div class="blog-date">12 Mai 2026</div>
+            <h3>Cheltuieli deductibile 2026 — ghidul complet pentru PFA</h3>
+            <p class="blog-excerpt">Tot ce trebuie să știi despre cheltuielile deductibile pentru PFA în 2026, conform ultimelor modificări legislative.</p>
+            <span class="blog-link blog-link-soon">
+              În curând <span>→</span>
+            </span>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image">
+            <div class="blog-image-placeholder">G</div>
+          </div>
+          <div class="blog-content">
+            <div class="blog-date">05 Mai 2026</div>
+            <h3>PFA sau microîntreprindere? Comparație pentru veniturile sub 60.000 €</h3>
+            <p class="blog-excerpt">Analiză comparativă completă cu exemple practice pentru a alege forma juridică optimă în 2026.</p>
+            <span class="blog-link blog-link-soon">
+              În curând <span>→</span>
+            </span>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image">
+            <div class="blog-image-placeholder">G</div>
+          </div>
+          <div class="blog-content">
+            <div class="blog-date">28 Aprilie 2026</div>
+            <h3>5 erori fiscale frecvente la freelancerii români</h3>
+            <p class="blog-excerpt">Cele mai întâlnite greșeli care duc la amenzi ANAF și cum le poți evita încă de la început.</p>
+            <span class="blog-link blog-link-soon">
+              În curând <span>→</span>
+            </span>
+          </div>
+        </article>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="blog.html" class="btn btn-secondary">
+          Vezi toate articolele
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESPRE -->
+  <section id="despre" class="fade-in">
+    <div class="section-container">
+      <div class="about-grid">
+        <div class="about-content">
+          <div class="eyebrow">Despre</div>
+          <h2>Gea Digital Hub</h2>
+          <p>
+            Gea Digital Hub este un atelier digital dedicat profesioniștilor care apreciază rigoarea, claritatea și estetica. Creăm resurse premium pentru freelanceri, PFA și microîntreprinderi din România și diaspora — ghiduri fiscale, calculatoare interactive, kit-uri editoriale.
+          </p>
+          <p>
+            Filozofia noastră este simplă: livrăm calitate maximă și lăsăm cumpărătorul să decidă valoarea. Fiecare produs este creat cu atenție la detaliu, verificat conform legislației actuale și conceput să rezolve probleme reale.
+          </p>
+          <div class="placeholder-note">
+            Această secțiune va fi completată cu povestea brandului în versiunea finală.
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="about-monogram">G</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="fade-in" style="padding-bottom: 6rem;">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="eyebrow">Contact</div>
+        <h2>Hai să vorbim</h2>
+        <p>Întrebări despre produse, colaborări sau sugestii? Scrie-ne și răspundem în maxim 24 de ore.</p>
+      </div>
+
+      <div style="max-width: 500px; margin: 0 auto; text-align: center;">
+        <a href="mailto:contact@geadigitalhub.com" class="btn btn-primary">
+          contact@geadigitalhub.com
+        </a>
+        <p style="margin-top: 2rem; color: var(--text-muted); font-size: 0.9rem;">
+          Sau găsește-ne pe Pinterest și pe Payhip.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="gold-letter">G</span>ea Digital Hub
+        </a>
+        <p>Resurse digitale premium pentru profesioniștii moderni. Calitatea o livrăm noi. Valoarea o trăiești tu.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Produse</h4>
+        <ul>
+          <li><a href="#produse">Ghiduri fiscale</a></li>
+          <li><a href="#produse">Calculatoare</a></li>
+          <li><a href="#produse">Business kit-uri</a></li>
+          <li><a href="https://payhip.com/geadigitalhub" target="_blank" rel="noopener">Magazin Payhip</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resurse</h4>
+        <ul>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#despre">Despre</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <form class="newsletter-mini newsletter-form">
+          <input type="email" placeholder="Email-ul tău" required>
+          <button type="submit">Abonează-te</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 Gea Digital Hub. Toate drepturile rezervate.</div>
+      <div class="legal-links">
+        <a href="pages/termeni.html">Termeni</a>
+        <a href="pages/confidentialitate.html">Confidențialitate</a>
+        <a href="pages/cookies.html">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Buton scroll to top -->
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Înapoi sus">
+    <span class="scroll-top-arrow">↑</span>
+    <span class="scroll-top-label">Sus</span>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
