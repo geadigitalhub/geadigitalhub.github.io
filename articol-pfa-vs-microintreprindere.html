@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PFA sau Microîntreprindere? Comparație pentru venituri sub 60.000 € | Gea Digital Hub</title>
+<meta name="description" content="Comparație fiscală PFA vs microîntreprindere pentru 2026: ce cheltuieli reduc impozitul, exemplu de calcul la 60.000€ venit anual și cum alegi forma optimă.">
+<meta name="author" content="Gea Digital Hub">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PFA sau Microîntreprindere? Comparație pentru venituri sub 60.000 €">
+<meta property="og:description" content="Tabel comparativ PFA vs micro și exemplu real de economie fiscală la 60.000€ venit anual.">
+<meta property="og:site_name" content="Gea Digital Hub">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --navy: #2E3047; --indigo: #1A1B2F; --gold: #FFD700; --gold-soft: #E6C200;
+        --royal: #0F52BA; --emerald: #50C878; --coral: #FF5A3C; --electric: #449DFF;
+        --lime: #6BCF5A; --cream: #F5F5DC; --gri: #A9A9A9;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        font-family: 'Lato', sans-serif;
+        background: linear-gradient(135deg, var(--indigo) 0%, var(--navy) 50%, #252740 100%);
+        color: var(--cream); min-height: 100vh; overflow-x: hidden;
+    }
+    a { color: inherit; }
+    .site-nav { display: flex; align-items: center; justify-content: space-between; max-width: 1100px; margin: 0 auto; padding: 20px 40px; position: relative; z-index: 5; border-bottom: 1px solid rgba(255,215,0,0.12); }
+    .site-nav .logo { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 700; font-size: 22px; color: var(--gold); text-decoration: none; }
+    .site-nav .links a { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 1px; color: var(--cream); text-decoration: none; margin-left: 28px; }
+    .site-nav .links a:hover { color: var(--gold); }
+    @media (max-width: 640px){ .site-nav .links a { margin-left: 14px; font-size: 11px; } .site-nav { padding: 16px 20px; } }
+
+    .wrap { padding: 40px 20px; }
+    .container { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+    .breadcrumb { font-family: 'Montserrat', sans-serif; font-size: 12px; letter-spacing: 2px; color: var(--gri); text-transform: uppercase; margin-bottom: 24px; }
+    .breadcrumb a { color: var(--gold); text-decoration: none; }
+
+    .article-head { text-align: center; padding: 20px 20px 60px; }
+    .badge { display: inline-block; padding: 10px 24px; background: linear-gradient(135deg, var(--gold) 0%, var(--gold-soft) 100%); color: var(--indigo); font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; border-radius: 2px; box-shadow: 0 4px 0 rgba(230,194,0,0.6), 0 8px 24px rgba(255,215,0,0.3); margin-bottom: 28px; }
+    h1 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 52px; line-height: 1.04; letter-spacing: -1.5px; margin-bottom: 20px; background: linear-gradient(135deg, #FFF 0%, var(--gold) 50%, var(--gold-soft) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .article-meta { font-family: 'Montserrat', sans-serif; font-size: 13px; letter-spacing: 1px; color: var(--gri); }
+    .subtitle { font-family: 'Montserrat', sans-serif; font-size: 17px; font-weight: 300; color: var(--gri); letter-spacing: 1px; max-width: 680px; margin: 18px auto 0; line-height: 1.6; }
+    .intro { max-width: 780px; margin: 0 auto 70px; font-size: 17px; line-height: 1.85; color: var(--cream); }
+    .intro .highlight { color: var(--emerald); font-weight: 700; }
+
+    .section-title { text-align: center; margin-bottom: 60px; }
+    .section-title .eyebrow { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 6px; color: var(--gold); text-transform: uppercase; margin-bottom: 16px; }
+    .section-title h2 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 44px; color: var(--cream); letter-spacing: -1px; }
+
+    /* TABEL */
+    .comparison-section { margin-bottom: 100px; padding: 0 40px; }
+    .comparison-table { background: linear-gradient(135deg, rgba(46,48,71,0.95) 0%, rgba(26,27,47,0.98) 100%); border: 1px solid rgba(255,215,0,0.3); border-radius: 8px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,215,0,0.1); transform: perspective(1200px) rotateX(2deg); }
+    .comparison-header { display: grid; grid-template-columns: 2fr 1fr 1fr; background: linear-gradient(90deg, var(--indigo), var(--navy)); padding: 20px 28px; border-bottom: 2px solid var(--gold); }
+    .comparison-header > div { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
+    .comparison-header > div:first-child { color: var(--cream); }
+    .comparison-row { display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 18px 28px; border-bottom: 1px solid rgba(255,215,0,0.08); align-items: center; transition: background 0.3s; }
+    .comparison-row:hover { background: rgba(255,215,0,0.03); }
+    .comparison-row:last-child { border-bottom: none; }
+    .comparison-row .label { font-weight: 600; color: var(--cream); font-size: 14px; }
+    .comparison-row .pfa-val, .comparison-row .micro-val { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px; }
+    .pfa-val { color: var(--emerald); }
+    .micro-val { color: var(--electric); }
+    .badge-yes { display: inline-block; padding: 4px 12px; background: rgba(80,200,120,0.15); border: 1px solid var(--emerald); border-radius: 12px; font-size: 11px; letter-spacing: 1px; }
+    .badge-no { display: inline-block; padding: 4px 12px; background: rgba(255,90,60,0.15); border: 1px solid var(--coral); color: var(--coral); border-radius: 12px; font-size: 11px; letter-spacing: 1px; }
+
+    /* SCENARIU */
+    .scenario-section { margin-bottom: 100px; padding: 60px 40px; background: linear-gradient(135deg, rgba(15,82,186,0.15) 0%, rgba(80,200,120,0.08) 100%); border: 1px solid rgba(255,215,0,0.2); border-radius: 8px; position: relative; overflow: hidden; }
+    .scenario-section::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,215,0,0.05) 0%, transparent 40%); animation: scenarioGlow 8s ease-in-out infinite; }
+    @keyframes scenarioGlow { 0%,100%{transform:translate(0,0);} 50%{transform:translate(10%,10%);} }
+    .scenario-title { text-align: center; margin-bottom: 40px; position: relative; }
+    .scenario-title .eyebrow { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 6px; color: var(--coral); text-transform: uppercase; margin-bottom: 12px; }
+    .scenario-title h2 { font-family: 'Playfair Display', serif; font-size: 34px; color: var(--cream); font-weight: 900; }
+    .scenario-flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; position: relative; }
+    .scenario-box { background: linear-gradient(135deg, rgba(46,48,71,0.9), rgba(26,27,47,0.95)); border: 2px solid rgba(255,215,0,0.2); border-radius: 6px; padding: 28px; text-align: center; position: relative; box-shadow: 0 12px 32px rgba(0,0,0,0.4); transition: transform 0.4s; }
+    .scenario-box:hover { transform: translateY(-8px); }
+    .scenario-box:nth-child(1) { border-color: rgba(255,90,60,0.4); }
+    .scenario-box:nth-child(2) { border-color: rgba(255,215,0,0.4); }
+    .scenario-box:nth-child(3) { border-color: rgba(80,200,120,0.4); }
+    .scenario-label { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+    .scenario-box:nth-child(1) .scenario-label { color: var(--coral); }
+    .scenario-box:nth-child(2) .scenario-label { color: var(--gold); }
+    .scenario-box:nth-child(3) .scenario-label { color: var(--emerald); }
+    .scenario-value { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 900; margin-bottom: 8px; line-height: 1; }
+    .scenario-box:nth-child(1) .scenario-value { color: var(--coral); }
+    .scenario-box:nth-child(2) .scenario-value { color: var(--gold); }
+    .scenario-box:nth-child(3) .scenario-value { color: var(--emerald); }
+    .scenario-desc { font-size: 13px; color: var(--gri); line-height: 1.5; }
+
+    /* CTA */
+    .cta-section { text-align: center; padding: 80px 40px; background: radial-gradient(circle at 50% 50%, rgba(255,215,0,0.15) 0%, transparent 60%), linear-gradient(135deg, var(--indigo) 0%, var(--navy) 100%); border-radius: 8px; position: relative; overflow: hidden; margin-bottom: 40px; }
+    .cta-section::before, .cta-section::after { content: ''; position: absolute; width: 300px; height: 300px; border-radius: 50%; filter: blur(80px); }
+    .cta-section::before { background: var(--royal); top: -100px; left: -100px; opacity: 0.3; }
+    .cta-section::after { background: var(--emerald); bottom: -100px; right: -100px; opacity: 0.2; }
+    .cta-content { position: relative; z-index: 1; }
+    .cta-eyebrow { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 6px; color: var(--gold); text-transform: uppercase; margin-bottom: 16px; }
+    .cta-title { font-family: 'Playfair Display', serif; font-size: 44px; font-weight: 900; color: var(--cream); margin-bottom: 16px; line-height: 1.1; }
+    .cta-title .accent { color: var(--gold); font-style: italic; }
+    .cta-desc { font-size: 16px; color: var(--gri); max-width: 600px; margin: 0 auto 32px; line-height: 1.7; }
+    .cta-button { display: inline-block; padding: 18px 48px; background: linear-gradient(135deg, var(--coral) 0%, #e0492d 100%); color: white; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; border-radius: 2px; box-shadow: 0 6px 0 #a03320, 0 12px 30px rgba(255,90,60,0.4); transition: all 0.2s; }
+    .cta-button:hover { transform: translateY(2px); box-shadow: 0 4px 0 #a03320, 0 8px 20px rgba(255,90,60,0.5); }
+
+    .footer { text-align: center; padding: 40px 20px 30px; color: var(--gri); font-family: 'Montserrat', sans-serif; font-size: 12px; letter-spacing: 2px; }
+    .footer .brand { color: var(--gold); font-family: 'Playfair Display', serif; font-size: 20px; font-style: italic; margin-bottom: 12px; }
+    .footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 768px) {
+        h1 { font-size: 36px; }
+        .comparison-header, .comparison-row { grid-template-columns: 1fr; gap: 8px; }
+        .scenario-flow { grid-template-columns: 1fr; }
+        .cta-title { font-size: 30px; }
+    }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+    <a href="index.html" class="logo">Gea Digital Hub</a>
+    <div class="links">
+        <a href="index.html#produse">Produse</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html#despre">Despre</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+</nav>
+
+<div class="wrap">
+<div class="container">
+
+    <div class="breadcrumb"><a href="blog.html">← Blog</a> · Fiscalitate · Formă juridică</div>
+
+    <header class="article-head">
+        <div class="badge">Comparație Fiscală · 2026</div>
+        <h1>PFA sau microîntreprindere?<br>Comparație pentru venituri sub 60.000 €</h1>
+        <div class="article-meta">05 Mai 2026 · Gea Digital Hub · ~5 min citire</div>
+        <p class="subtitle">Analiză comparativă completă cu exemple practice pentru a alege forma juridică optimă în 2026.</p>
+    </header>
+
+    <p class="intro">
+        Diferența majoră dintre cele două forme este simplă, dar costisitoare dacă o ignori: <span class="highlight">PFA-ul plătește impozit pe venitul NET</span> (după ce scazi cheltuielile deductibile), în timp ce <span class="highlight">microîntreprinderea plătește pe venitul BRUT</span> (1% sau 3%), fără să reducă baza cu aceste cheltuieli. Mai jos vezi exact ce cheltuieli contează la fiecare și un exemplu de calcul la 60.000 € venit anual.
+    </p>
+
+    <!-- TABEL -->
+    <div class="section-title">
+        <div class="eyebrow">Comparație Fiscală</div>
+        <h2>PFA vs Microîntreprindere</h2>
+    </div>
+
+    <section class="comparison-section">
+        <div class="comparison-table">
+            <div class="comparison-header">
+                <div>CATEGORIE</div>
+                <div>PFA (Real)</div>
+                <div>Micro (1% / 3%)</div>
+            </div>
+            <div class="comparison-row">
+                <div class="label">Chirie birou</div>
+                <div class="pfa-val"><span class="badge-yes">100% deductibil</span></div>
+                <div class="micro-val"><span class="badge-no">Nu reduce baza</span></div>
+            </div>
+            <div class="comparison-row">
+                <div class="label">Laptop & echipamente</div>
+                <div class="pfa-val"><span class="badge-yes">100% / amortizare</span></div>
+                <div class="micro-val"><span class="badge-no">Nu reduce baza</span></div>
+            </div>
+            <div class="comparison-row">
+                <div class="label">Combustibil auto mixt</div>
+                <div class="pfa-val"><span class="badge-yes">50%</span></div>
+                <div class="micro-val"><span class="badge-no">Nu reduce baza</span></div>
+            </div>
+            <div class="comparison-row">
+                <div class="label">Formare profesională</div>
+                <div class="pfa-val"><span class="badge-yes">100%</span></div>
+                <div class="micro-val"><span class="badge-no">Nu reduce baza</span></div>
+            </div>
+            <div class="comparison-row">
+                <div class="label">Marketing & publicitate</div>
+                <div class="pfa-val"><span class="badge-yes">100%</span></div>
+                <div class="micro-val"><span class="badge-no">Nu reduce baza</span></div>
+            </div>
+            <div class="comparison-row">
+                <div class="label">Contabilitate</div>
+                <div class="pfa-val"><span class="badge-yes">100%</span></div>
+                <div class="micro-val"><span class="badge-no">Nu reduce baza</span></div>
+            </div>
+            <div class="comparison-row">
+                <div class="label">Impozit calculat pe</div>
+                <div class="pfa-val">Venit NET (după deduceri)</div>
+                <div class="micro-val">Venit BRUT (fără deduceri)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENARIU -->
+    <section class="scenario-section">
+        <div class="scenario-title">
+            <div class="eyebrow">Exemplu Practic</div>
+            <h2>PFA cu 60.000 € venit anual</h2>
+        </div>
+        <div class="scenario-flow">
+            <div class="scenario-box">
+                <div class="scenario-label">Fără deduceri</div>
+                <div class="scenario-value">9.600€</div>
+                <p class="scenario-desc">Impozit 16% pe venitul brut integral — cel mai costisitor scenariu.</p>
+            </div>
+            <div class="scenario-box">
+                <div class="scenario-label">Cu deduceri corecte</div>
+                <div class="scenario-value">6.400€</div>
+                <p class="scenario-desc">20.000€ cheltuieli deductibile → 40.000€ venit net → impozit 16%.</p>
+            </div>
+            <div class="scenario-box">
+                <div class="scenario-label">Economie reală</div>
+                <div class="scenario-value">3.200€</div>
+                <p class="scenario-desc">Anual, direct în buzunar — echivalentul unei vacanțe sau al unui laptop premium.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <div class="cta-eyebrow">Instrument Interactiv</div>
+            <h2 class="cta-title">Compară singur<br><span class="accent">PFA vs Micro</span></h2>
+            <p class="cta-desc">Calculator PRO PFA & Microîntreprindere 2026 — trei taburi (PFA, Micro, Comparator), grafice animate, calendar fiscal și calcule trimestriale. Vezi în câteva secunde ce formă îți convine.</p>
+            <a href="https://payhip.com/b/Vcq3m" class="cta-button" target="_blank" rel="noopener">Descoperă Calculatorul →</a>
+        </div>
+    </section>
+
+    <p class="intro" style="text-align:center; margin-bottom:20px;">
+        Vezi și: <a href="articol-cheltuieli-deductibile-2026.html" style="color:var(--gold);">Ghidul complet de cheltuieli deductibile</a> · <a href="articol-5-erori-fiscale.html" style="color:var(--gold);">5 erori fiscale frecvente</a>
+    </p>
+
+</div>
+</div>
+
+<footer class="footer">
+    <div class="brand">Gea Digital Hub</div>
+    <div>GHIDURI FISCALE · CALCULATOARE · PACHETE BUSINESS</div>
+    <div style="margin-top:8px;">Magazin: <a href="https://payhip.com/geadigitalhub" target="_blank" rel="noopener">payhip.com/geadigitalhub</a></div>
+</footer>
+
+</body>
+</html>
